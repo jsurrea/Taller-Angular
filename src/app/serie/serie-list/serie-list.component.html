@@ -1,3 +1,27 @@
-<p>
-  serie-list works!
-</p>
+<!-- Main Content -->
+<div class="container mt-4">
+  <div class="row">
+    <!-- Table -->
+    <div class="col-6">
+      <table class="table">
+        <thead>
+          <tr class="table-secondary">
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Channel</th>
+            <th scope="col">Seasons</th>
+          </tr>
+          <tr *ngFor="let serie of series">
+            <th scope="row">{{serie.id}}</th>
+            <td><a href="#" class="text-decoration-none">{{serie.name}}</a></td>
+            <td>{{serie.channel}}</td>
+            <td>{{serie.seasons}}</td>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+      <!-- Summary -->
+      <p>Seasons average: {{getAverage()}}</p>
+    </div>
+  </div>
+</div>
